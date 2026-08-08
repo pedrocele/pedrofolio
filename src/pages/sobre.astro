@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+---
+
+<BaseLayout title="Sobre mim — Pedro Celestino">
+  <div class="site-container">
+    <Header active="sobre" />
+
+    <main class="about-page">
+      <section class="identity-card">
+
+        <div class="identity-photo-area">
+  <img
+    src="/public/images/projects/doodle.webp"
+    alt="Personagem representando Pedro"
+    class="about-character"
+  />
+</div>
+        <div class="identity-content">
+
+          <div class="identity-name">
+            Pedro Celestino M. S.
+          </div>
+
+          <div class="identity-tags">
+            <span>Automação</span>
+            <span>Design</span>
+            <span>Dados</span>
+          </div>
+
+          <div class="identity-description">
+            Sou criativo, extrovertido e curioso. Gosto de desafios.
+            Trabalho com dados, programação e design, e gosto bastante
+            de automatizar processos, facilitar e agilizar a vida!
+          </div>
+
+          <div class="barcode">
+            <span></span>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </div>
+</BaseLayout>

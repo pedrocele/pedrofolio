@@ -1,0 +1,377 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+---
+
+<BaseLayout title="Webapp de compras — Pedro Celestino">
+  <div class="site-container">
+    <Header active="trabalhos" />
+
+    <main class="project-detail-page">
+
+      <a href="/" class="back-link">
+         <img
+      src="/images/projects/back-button.svg"
+      alt=""
+      class="back-link"
+    />
+        Voltar
+      </a>
+
+      <h1 class="project-mobile-title">
+        Webapp de compras
+      </h1>
+
+      <div class="project-detail-grid">
+
+        <div class="project-detail-cover">
+          <img
+            src="/images/projects/webapp-compras.webp"
+            alt="Webapp de compras"
+          />
+        </div>
+
+        <article class="project-article">
+
+         <header class="project-heading">
+  <h1>Webapp de compras</h1>
+
+  <p>
+    Um sistema simples para organizar pedidos, automatizar registros
+    e reduzir trabalho manual.
+  </p>
+</header>
+          <section>
+            <span class="project-label">Contexto</span>
+
+            <h2>
+              Um processo operacional que precisava ser mais simples.
+            </h2>
+
+            <p>
+               A rotina de compras da cantina da fazenda dependia do envio e da
+    organização manual das solicitações feitas pelas funcionárias.
+    As informações precisavam chegar até o escritório de forma clara,
+    organizada e fácil de consultar para que o setor responsável pudesse
+    dar continuidade às compras.
+            </p>
+          </section>
+
+          <section>
+            <span class="project-label">Problema</span>
+
+            <h2>
+              Pedidos descentralizados e informações difíceis de acompanhar.
+            </h2>
+
+            <p>
+               O fluxo anterior dependia de solicitações enviadas de forma pouco
+    padronizada, o que dificultava a organização dos itens, a conferência
+    das informações e o acompanhamento dos pedidos. Além de aumentar o
+    trabalho manual, isso criava espaço para erros, informações incompletas
+    e retrabalho no escritório.
+            </p>
+          </section>
+
+          <section>
+            <span class="project-label">Solução</span>
+
+            <h2>
+              Transformar uma atividade manual em um fluxo digital.
+            </h2>
+
+            <p>
+              A solução foi desenvolver um webapp interno no qual as funcionárias
+    da cantina podem registrar os itens necessários diretamente por um link.
+    Ao finalizar a solicitação, os dados são enviados automaticamente para
+    uma planilha utilizada pelo escritório, centralizando as informações
+    em um único lugar e deixando o pedido pronto para ser acompanhado.
+            </p>
+          </section>
+
+        <section>
+  <span class="project-label">Como funciona</span>
+
+  <h2>
+    Uma interface simples conectada diretamente ao controle de compras.
+  </h2>
+
+  <p>
+    O webapp é publicado na Vercel e envia as informações preenchidas
+    para uma integração desenvolvida com Google Apps Script. O script
+    recebe os dados e registra automaticamente cada solicitação em uma
+    planilha do Google Sheets. A aplicação também permite exportar a lista
+    de compras em PDF, facilitando o uso das informações fora do sistema.
+  </p>
+</section>
+
+<div class="project-flow">
+  <span class="project-label">Fluxo visual</span>
+
+  <div class="project-flow-heading">
+    <div>
+      <h2>Do pedido ao acompanhamento.</h2>
+
+      <p class="project-flow-intro">
+        Navegue pelas etapas do processo.
+      </p>
+    </div>
+
+    <div class="project-flow-controls">
+      <button
+        class="project-flow-arrow project-flow-prev"
+        type="button"
+        aria-label="Etapa anterior"
+      >
+       <img
+          src="/images/projects/seta-esquerda.svg"
+           alt=""
+    aria-hidden="true"
+        />
+      </button>
+
+      <button
+        class="project-flow-arrow project-flow-next"
+        type="button"
+        aria-label="Próxima etapa"
+      >
+      <img
+          src="/images/projects/seta-direita.svg"
+           alt=""
+    aria-hidden="true"
+        />
+      </button>
+    </div>
+  </div>
+
+  <div class="project-flow-scroll">
+
+    <article class="project-flow-step">
+      <div class="project-flow-screen">
+        <img
+          src="/images/projects/Tela Inicial.png"
+          alt="Tela para escolha da fazenda"
+        />
+      </div>
+
+      <div class="project-flow-caption">
+        <span class="project-flow-number">1</span>
+
+        <p>
+          Primeiro, escolha a fazenda para iniciar uma nova lista de compras.
+        </p>
+      </div>
+    </article>
+
+    <article class="project-flow-step">
+      <div class="project-flow-screen">
+        <img
+          src="/images/projects/pedido.svg"
+          alt="Tela para escolha de quantidade e unidade"
+        />
+      </div>
+
+      <div class="project-flow-caption">
+        <span class="project-flow-number">2</span>
+
+        <p>
+          Preencha a quantidade dos produtos, escolha a unidade e adicione
+          observações quando necessário.
+        </p>
+      </div>
+    </article>
+
+    <article class="project-flow-step">
+      <div class="project-flow-screen">
+        <img
+          src="/images/projects/adcionais.png"
+          alt="Tela para itens extras"
+        />
+      </div>
+
+      <div class="project-flow-caption">
+        <span class="project-flow-number">3</span>
+
+        <p>
+          Adicione itens extras que não estejam disponíveis na lista principal.
+        </p>
+      </div>
+    </article>
+
+    <article class="project-flow-step">
+      <div class="project-flow-screen">
+        <img
+          src="/images/projects/resumo.png"
+          alt="Tela de conferência do pedido"
+        />
+      </div>
+
+      <div class="project-flow-caption">
+        <span class="project-flow-number">4</span>
+
+        <p>
+          Confira o pedido antes de enviar e, se precisar, exporte uma versão
+          em PDF.
+        </p>
+      </div>
+    </article>
+
+    <article class="project-flow-step">
+      <div class="project-flow-screen">
+        <img
+          src="/images/projects/pdfexportado.png"
+          alt="PDF gerado pelo aplicativo"
+        />
+      </div>
+
+      <div class="project-flow-caption">
+        <span class="project-flow-number">5</span>
+
+        <p>
+          A lista também pode ser gerada em PDF para consulta, impressão
+          ou compartilhamento.
+        </p>
+      </div>
+    </article>
+
+    <article class="project-flow-step project-flow-step--desktop">
+      <div class="project-flow-screen">
+        <img
+          src="/images/projects/planilha.svg"
+          alt="Pedido recebido na planilha"
+        />
+      </div>
+
+      <div class="project-flow-caption">
+        <span class="project-flow-number">6</span>
+
+        <p>
+          Ao finalizar, os dados são recebidos automaticamente na planilha
+          de acompanhamento do escritório.
+        </p>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<section>
+  <span class="project-label">Meu papel</span>
+
+  <h2>
+    Do entendimento do processo à implementação da solução.
+  </h2>
+
+  <p>
+    O projeto envolveu a análise do fluxo de trabalho existente,
+    organização das informações necessárias, desenvolvimento da interface,
+    programação do webapp e criação da integração responsável por conectar
+    a aplicação ao Google Sheets. O objetivo durante todo o processo foi
+    manter a ferramenta simples para quem solicita e prática para quem
+    recebe e organiza os pedidos.
+  </p>
+</section>
+
+<section>
+  <span class="project-label">Resultado</span>
+
+  <h2>
+    Um processo mais centralizado, padronizado e fácil de acompanhar.
+  </h2>
+
+  <p>
+    Com o novo fluxo, as solicitações deixam de depender de registros
+    dispersos e passam a chegar ao escritório em um formato único e
+    organizado. O projeto reduz etapas manuais, facilita a conferência
+    dos pedidos e cria uma base de dados que pode ser consultada e
+    utilizada posteriormente no controle das compras.
+  </p>
+</section>
+
+          <section>
+            <span class="project-label">Ferramentas</span>
+
+            <div class="project-tools">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Apps Script</span>
+              <span>Google Sheets</span>
+              <span>Vercel</span>
+            </div>
+          </section>
+
+        </article>
+      </div>
+    </main>
+  </div>
+
+
+</BaseLayout>
+<script>
+  const flowScroller = document.querySelector(".project-flow-scroll");
+  const prevButton = document.querySelector(".project-flow-prev");
+  const nextButton = document.querySelector(".project-flow-next");
+
+  if (
+    flowScroller instanceof HTMLElement &&
+    prevButton instanceof HTMLButtonElement &&
+    nextButton instanceof HTMLButtonElement
+  ) {
+    const getStepSize = () => {
+      const card =
+        flowScroller.querySelector(".project-flow-step");
+
+      if (!(card instanceof HTMLElement)) {
+        return 0;
+      }
+
+      const styles =
+        window.getComputedStyle(flowScroller);
+
+      const gap =
+        parseFloat(styles.columnGap || styles.gap) || 0;
+
+      return card.offsetWidth + gap;
+    };
+
+    const updateButtons = () => {
+      const maxScroll =
+        flowScroller.scrollWidth -
+        flowScroller.clientWidth;
+
+      prevButton.disabled =
+        flowScroller.scrollLeft <= 5;
+
+      nextButton.disabled =
+        flowScroller.scrollLeft >=
+        maxScroll - 5;
+    };
+
+    nextButton.addEventListener("click", () => {
+      flowScroller.scrollBy({
+        left: getStepSize(),
+        behavior: "smooth",
+      });
+    });
+
+    prevButton.addEventListener("click", () => {
+      flowScroller.scrollBy({
+        left: -getStepSize(),
+        behavior: "smooth",
+      });
+    });
+
+    flowScroller.addEventListener(
+      "scroll",
+      updateButtons
+    );
+
+    window.addEventListener(
+      "resize",
+      updateButtons
+    );
+
+    updateButtons();
+  }
+</script>

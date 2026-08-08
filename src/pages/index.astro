@@ -1,17 +1,101 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 
+const projects = [
+  {
+    title: "Webapp de compras",
+    description: "Programação e automação",
+    image: "/images/projects/webapp-compras.webp",
+    href: "/projetos/webapp-compras",
+  },
+  {
+    title: "Coleção de discos",
+    description: "Design e desenvolvimento web",
+    image: "/images/projects/albuns.webp",
+    href: "#",
+  },
+  {
+    title: "Dashboard de safra",
+    description: "Dados e visualização",
+    image: "/images/projects/dashboard-safra.webp",
+    href: "#",
+  },
+  {
+    title: "Colosso",
+    description: "Identidade visual",
+    image: "/images/projects/idv-colosso.webp",
+    href: "#",
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Pedro Celestino — Trabalhos">
+  <div class="site-container">
+    <Header active="trabalhos" />
+
+    <main class="works-page">
+      <h1>Alguns dos meus projetos:</h1>
+
+      <div class="projects-scroll">
+        {
+          projects.map((project) => (
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              image={project.image}
+              href={project.href}
+            />
+          ))
+        }
+      </div>
+    </main>
+  </div>
+</BaseLayout>
+
+<script>
+  const scroller = document.querySelector(".projects-scroll");
+
+  if (scroller instanceof HTMLElement) {
+    let targetScroll = scroller.scrollLeft;
+    let currentScroll = scroller.scrollLeft;
+    let animationFrame;
+
+    const animate = () => {
+      currentScroll += (targetScroll - currentScroll) * 0.08;
+
+      scroller.scrollLeft = currentScroll;
+
+      if (Math.abs(targetScroll - currentScroll) > 0.5) {
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        currentScroll = targetScroll;
+        scroller.scrollLeft = targetScroll;
+      }
+    };
+
+    scroller.addEventListener(
+      "wheel",
+      (event) => {
+        if (window.innerWidth <= 768) return;
+
+        event.preventDefault();
+
+        const maxScroll =
+          scroller.scrollWidth - scroller.clientWidth;
+
+        targetScroll += event.deltaY * 1.2;
+
+        targetScroll = Math.max(
+          0,
+          Math.min(targetScroll, maxScroll)
+        );
+
+        cancelAnimationFrame(animationFrame);
+        animationFrame = requestAnimationFrame(animate);
+      },
+      { passive: false }
+    );
+  }
+</script>

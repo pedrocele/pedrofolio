@@ -1,0 +1,77 @@
+---
+interface Props {
+  active?: "trabalhos" | "contato" | "sobre";
+}
+
+const { active = "trabalhos" } = Astro.props;
+---
+
+<header class="header">
+  <a href="/" class="header-brand">
+    <img
+      src="/images/projects/android-chrome-192x192.png"
+      alt="Avatar de Pedro"
+      class="header-avatar"
+    />
+
+    <div class="brand-text">
+      <span class="brand-name">Pedro.</span>
+      <span class="brand-role">Autor</span>
+    </div>
+  </a>
+
+  <nav class="desktop-nav">
+    <a
+      href="/"
+      class:list={["nav-link", { active: active === "trabalhos" }]}
+    >
+     <img
+  src="/images/projects/trabalhos-icon.svg"
+  alt=""
+  class="nav-icon"
+/>
+
+      Trabalhos
+    </a>
+
+    <a
+      href="/contato"
+      class:list={["nav-link", { active: active === "contato" }]}
+    >
+     <img
+  src="/images/projects/email-icon.svg"
+  alt=""
+  class="nav-icon"
+/>
+
+      Contato
+    </a>
+
+    <a
+      href="/sobre"
+      class:list={["nav-link", { active: active === "sobre" }]}
+    >
+   <img
+  src="/images/projects/info-icon.svg"
+  alt=""
+  class="nav-icon"
+/>
+
+      Sobre mim
+    </a>
+  </nav>
+
+  <details class="mobile-menu">
+    <summary aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </summary>
+
+    <nav class="mobile-menu-content">
+      <a href="/">Trabalhos</a>
+      <a href="/contato">Contato</a>
+      <a href="/sobre">Sobre mim</a>
+    </nav>
+  </details>
+</header>
