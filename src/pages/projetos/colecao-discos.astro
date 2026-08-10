@@ -1,0 +1,170 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+---
+
+<BaseLayout title="Coleção de discos — Pedro Celestino">
+  <div class="site-container">
+    <Header />
+
+    <main class="project-detail-page">
+      <a href="/" class="back-link">
+        <img
+          src="/images/projects/back-button.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <span>Voltar</span>
+      </a>
+
+      <div class="project-detail-grid">
+        <div class="project-detail-cover">
+          <img
+            src="/images/projects/albuns.webp"
+            alt="Coleção de discos"
+          />
+        </div>
+
+        <article class="project-article">
+          <div class="project-heading">
+  <span class="project-label">
+    Design e desenvolvimento web
+  </span>
+
+  <h1>Coleção de discos</h1>
+
+  <p>
+    Um projeto feito entre música e código. Criei esta coleção para
+    reunir alguns dos álbuns que mais gosto e usar o projeto como
+    espaço para experimentar interface, responsividade e
+    desenvolvimento web.
+  </p>
+</div>
+
+          <section class="project-article-section">
+            <h2>Sobre o projeto</h2>
+
+            <p>
+              A coleção foi criada como um projeto pessoal,
+              combinando música + desenvolvimento web.
+            </p>
+
+            <p>
+              O site possui uma página principal com a coleção de
+              álbuns e uma página individual dedicada aos detalhes
+              de cada disco, ambas adaptadas para desktop e mobile.
+            </p>
+          </section>
+
+          <section class="discs-showcase">
+            <div class="discs-showcase-header">
+              <span>Exploração</span>
+              <h2>O projeto em uso</h2>
+            </div>
+
+            <article class="discs-demo">
+              <div class="discs-video-frame discs-video-frame--desktop">
+                <video
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                >
+                  <source
+                    src="/videos/demoplay-discos~2.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+
+              <div class="discs-demo-caption">
+                <span class="discs-demo-number">01</span>
+
+                <div>
+                  <h3>Experiência desktop</h3>
+
+                  <p>
+                    Navegação pela coleção e visualização
+                    individual dos álbuns.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="discs-demo discs-demo--mobile">
+              <div class="discs-video-frame discs-video-frame--phone">
+                <video
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                >
+                  <source
+                    src="/videos/demoplay-discos-mobile~2.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+
+              <div class="discs-demo-caption">
+                <span class="discs-demo-number">02</span>
+
+                <div>
+                  <h3>Experiência mobile</h3>
+
+                  <p>
+                    A mesma experiência reorganizada para
+                    navegação em telas menores.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="project-article-section">
+            <h2>Desenvolvimento</h2>
+
+            <p>
+              Durante o projeto, trabalhei principalmente a
+              estrutura das páginas, organização visual do
+              conteúdo, navegação entre os álbuns e adaptação da
+              interface para diferentes tamanhos de tela.
+            </p>
+          </section>
+
+          <section class="project-article-section">
+            <h2>Ferramentas</h2>
+
+            <div class="project-tools">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Astro</span>
+            </div>
+          </section>
+
+          <section class="project-visit">
+  <a
+    href="https://discos-mauve.vercel.app"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="project-visit-button"
+  >
+    <span>Quero ver isso!</span>
+
+    <span class="project-visit-icon">
+      <img
+        src="/images/projects/link-vazado.svg"
+        alt=""
+        aria-hidden="true"
+      />
+    </span>
+  </a>
+</section>
+        </article>
+      </div>
+    </main>
+  </div>
+</BaseLayout>

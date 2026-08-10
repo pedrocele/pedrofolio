@@ -624,8 +624,8 @@ input {
 }
 
 .back-link span {
-  font-size: 60px;
-  line-height: 0.7;
+  font-size: 34px;
+  line-height: 1;
 }
 
 .project-mobile-title {
@@ -672,8 +672,8 @@ input {
 
 .project-heading h1 {
   margin: 0 0 12px;
-  font-size: 44px;
-  line-height: 1;
+  font-size: 40px;
+  line-height: 1.05;
 }
 
 .project-heading p {
@@ -754,7 +754,197 @@ input {
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* =========================================
+   COLEÇÃO DE DISCOS
+   ========================================= */
 
+.discs-showcase {
+  width: 100%;
+}
+
+.discs-showcase-header {
+  margin-bottom: 28px;
+}
+
+.discs-showcase-header > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--green);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.discs-showcase-header h2 {
+  margin: 0;
+}
+
+
+/* cada demonstração */
+
+.discs-demo {
+  margin-bottom: 45px;
+}
+
+
+/* moldura dos vídeos */
+
+.discs-video-frame {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #ededed;
+}
+
+
+/* vídeo desktop */
+
+.discs-video-frame--desktop {
+  aspect-ratio: 16 / 9;
+}
+
+.discs-video-frame--desktop video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* vídeo mobile */
+
+.discs-demo--mobile {
+  max-width: 430px;
+}
+
+.discs-video-frame--phone {
+  width: 100%;
+
+  aspect-ratio: 9 / 16;
+}
+
+.discs-video-frame--phone video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* legenda */
+
+.discs-demo-caption {
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+
+  gap: 18px;
+
+  align-items: start;
+
+  margin-top: 18px;
+}
+
+.discs-demo-number {
+  color: var(--green);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.discs-demo-caption h3 {
+  margin:
+    0
+    0
+    6px;
+
+  font-size: 21px;
+}
+
+.project-article .discs-demo-caption p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.project-visit {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.project-visit-button {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 24px;
+
+  padding:
+    7px
+    8px
+    7px
+    26px;
+
+  border-radius: 999px;
+
+  background: #4e4e4e;
+  color: #fff;
+
+  font-size: 26px;
+  font-weight: 700;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.project-visit-icon img {
+  width: 50px;
+  height: 50px;
+
+  object-fit: contain;
+
+  filter: brightness(0) invert(1);
+
+  transition: transform 0.3s ease;
+}
+
+.project-visit-button:hover {
+  background: var(--green);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 0, 0, 0.16);
+}
+
+.project-visit-button:hover .project-visit-icon img {
+  transform: rotate(8deg) scale(1.08);
+}
 
 .project-flow-heading {
   display: flex;
@@ -1551,4 +1741,38 @@ input {
 
 .project-flow-caption p {
   font-size: 16px;
+}
+
+.discs-showcase {
+  width: 100%;
+}
+
+.discs-demo {
+  margin-bottom: 38px;
+}
+
+.discs-demo--mobile {
+  width: 100%;
+  max-width: 330px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.discs-video-frame {
+  border-radius: 20px;
+}
+
+.discs-demo-caption {
+  gap: 14px;
+
+  margin-top: 15px;
+}
+
+.discs-demo-caption h3 {
+  font-size: 19px;
+}
+
+.project-article .discs-demo-caption p {
+  font-size: 15px;
 }
