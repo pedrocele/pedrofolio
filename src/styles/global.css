@@ -920,6 +920,82 @@ input {
     box-shadow 0.25s ease;
 }
 
+/* =========================================
+   DASHBOARD DA SAFRA
+   ========================================= */
+
+.dashboard-showcase {
+  width: 100%;
+}
+
+.dashboard-main-image {
+  width: 100%;
+
+  margin-top: 25px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #ededed;
+}
+
+.dashboard-main-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dashboard-main-image:hover img {
+  transform: scale(1.02);
+}
+
+/* =========================================
+   COLOSSO
+   ========================================= */
+
+.colosso-showcase {
+  width: 100%;
+}
+
+.colosso-image {
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: #ededed;
+}
+
+.colosso-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.colosso-image:hover img {
+  transform: scale(1.02);
+}
+
+.colosso-image--large {
+  margin-top: 25px;
+}
+
+.colosso-gallery {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 18px;
+
+  margin-top: 25px;
+}
 
 .project-visit-icon img {
   width: 50px;
