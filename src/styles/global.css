@@ -500,11 +500,16 @@ input {
   position: absolute;
 
   width: 31%;
+  height: auto;
 
   left: 2%;
   bottom: -90px;
 
+  display: block;
+
   object-fit: contain;
+
+  z-index: 5;
 }
 
 .identity-content {
